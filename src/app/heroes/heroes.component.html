@@ -1,6 +1,33 @@
 <h2>My Heroes</h2>
 
 
+
+
+
+<ul>
+  <li *ngFor="let hero of heroes">
+    <button type="button" (click)="seleccionarHeroe(hero)">
+      <span class="badge">{{hero.id}}</span>
+      <span class="name">{{hero.name}}</span>
+    </button>
+
+    <div class="details">
+      <span class="description">{{hero.description}}</span>
+      <span class="age">{{hero.age}}</span>
+      <span class="genre">{{hero.genre}}</span>
+      <span class="photo">{{hero.img}}</span>
+      <span class="social">{{hero.facebookLink}}</span>
+    </div>
+  </li>
+</ul>
+
+<h2>Heroe seleccionado: {{heroeSeleccionado?.name}}</h2>
+
+<button (mousedown)="mouseDownMethod()">On Mouse down</button>
+<button (mouseup)="mouseUpMethod()">On Mouse up</button>
+<button (mouseover)="mouseOverMethod()">Over me</button>
+
+
 <table class="table table-striped table-dark">
   <thead>
     <tr>
@@ -31,22 +58,3 @@
     </tr>
   </tbody>
 </table>
-
-
-<ul>
-  <li *ngFor="let hero of heroes">
-    <button type="button">
-      <span class="badge">{{hero.id}}</span>
-      <span class="name">{{hero.name}}</span>
-      
-    </button>
-
-    <div class="details">
-      <span class="description">{{hero.description}}</span>
-      <span class="age">{{hero.age}}</span>
-      <span class="genre">{{hero.genre}}</span>
-      <span class="photo">{{hero.img}}</span>
-      <span class="social">{{hero.facebookLink}}</span>
-    </div>
-  </li>
-</ul>
