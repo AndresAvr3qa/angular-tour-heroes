@@ -1,13 +1,13 @@
-p{
-    font-weight: 700;
-    color: salmon;
-    font-size: 50px;
+.badge{
+    color:black;
 }
 
-button{
-    background-color:red;
-    width: 120px;
-    height: 60px;
-    color: white;
-    border: 2px solid gray;
+.button{
+    background-color: salmon;
+}
+
+.details span{
+    display: block;
+    padding: 5px;
+    margin-left: 30px;    
 }
